@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
@@ -9,9 +9,9 @@ function App() {
   const [error, setError] = useState(null);
 
   // useCallback
-  // const fetchMoviesHandler = useCallback(async () => {
-  //   //code 20-60
-  // }, []);
+  const fetchMoviesHandler = useCallback(async () => {
+    //code 20-60
+  }, []);
 
   useEffect(() => {
     fetchMoviesHandler();
