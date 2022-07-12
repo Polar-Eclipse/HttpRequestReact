@@ -52,18 +52,6 @@ function App() {
     setIsLoading(false);
   }
 
-  // elegant code
-  // let content = <p>Found on movies</p>;
-  // if (movie.length > 0) {
-  //   content = <MoviesList movies={movies} />;
-  // }
-  // if (error) {
-  //   content = <p>{ error}</p>
-  // }
-  // if (isLoading) {
-  //   content=<p>Loading</p>
-  // }
-
   return (
     <React.Fragment>
       <section>
@@ -71,10 +59,9 @@ function App() {
       </section>
       <section>
         {!isLoading && movies.length > 0 && <MoviesList movies={movies} />}
-        {!isLoading && movies.length === 0 && !error && <p>Found no movies</p>}
+        {!isLoading && movies.length === 0 && <p>Found no movies</p>}
         {isLoading && <p>Loading...</p>}
         {!isLoading && error && <p>{error}</p>}
-        {/* { content} */}
       </section>
     </React.Fragment>
   );
